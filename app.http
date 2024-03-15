@@ -1,0 +1,58 @@
+GET http://localhost:3000/
+
+#### register a new user
+
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+    "username":"Bharath",
+    "name":"Bharath Manda",
+    "gender":"Male",
+    "password":"bharath@123"
+   
+ }
+
+
+### login
+ 
+ POST http://localhost:3000/login
+ Content-Type: application/json
+
+  {
+    "username":"Bharath",
+    "password":"bharath@123"
+  }
+
+### add task
+POST http://localhost:3000/addTask
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJoYXJhdGgiLCJpYXQiOjE3MTA0ODUwNDZ9.M39GsfcY7or9XCWx4GswKAeSNq9uIdmhaqXsaVslILw
+
+  {
+      "task":"Learn React"
+      
+    }
+
+
+#### get all tasks
+
+GET http://localhost:3000/allTaks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJoYXJhdGgiLCJpYXQiOjE3MTA0ODUwNDZ9.M39GsfcY7or9XCWx4GswKAeSNq9uIdmhaqXsaVslILw
+
+ 
+#### update task
+
+
+PUT http://localhost:3000/update/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJoYXJhdGgiLCJpYXQiOjE3MTA0ODUwNDZ9.M39GsfcY7or9XCWx4GswKAeSNq9uIdmhaqXsaVslILw
+
+  {
+      "task":"lean Django"
+    }
+
+
+### delete task
+DELETE http://localhost:3000/delete/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJoYXJhdGgiLCJpYXQiOjE3MTA0ODUwNDZ9.M39GsfcY7or9XCWx4GswKAeSNq9uIdmhaqXsaVslILw
