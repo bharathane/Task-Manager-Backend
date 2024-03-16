@@ -179,3 +179,17 @@ app.delete("/delete/:id", authenticateToken, async (req, res) => {
     res.send({ message: "Task deleted successfully" });
   }
 });
+
+//update status of task
+
+app.put("/updateStatus/:id", authenticateToken, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { isComplete } = req.body;
+    const sqlQuery = `update tasks set isComplete =${isComplete} where id=${id}`;
+    const dbRes = await db.run(sqlQuery);
+    res.send({ message: "Status Updated Successfully" });
+  } catch (error) {
+    console.log(error.message);
+  }
+});
