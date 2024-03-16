@@ -23,6 +23,11 @@ In summary, Taskify is a cutting-edge Node.js project that redefines task manage
 ## Demo
 Here is a working live demo :  https://taskify-frontend-ten.vercel.app/
 
+## sample user credentials
+{
+username: Bharath
+Password: bharath@123
+}
 
 ## [Usage](https://taskify-frontend-ten.vercel.app/) 
 
