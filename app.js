@@ -113,7 +113,7 @@ app.post("/login/", async (req, res) => {
         username: username,
       };
       const jwtToken = jwt.sign(payload, "MY_SECRET_TOKEN");
-      res.send({ jwtToken });
+      res.send({ jwtToken, username });
     } else {
       // Incorrect pw
       res.status(400);
